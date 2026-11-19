@@ -1,0 +1,51 @@
+---
+title: Teams
+eyebrow: Three teams, two FIRST programs
+heading: Our teams
+lede: >-
+  Two FIRST Tech Challenge teams, varsity and JV, plus a FIRST Robotics Competition team, all
+  based at Valley Christian High School in Chandler.
+description: >-
+  Meet VCS Robotics: FTC 2844 Valley X Robotics (varsity), FTC 12841 +3 Robotics (JV), and FRC 8848 BLU CRU.
+---
+<section class="section">
+  <div class="container">
+    <div class="team-grid">
+      {% for t in site.data.teams %}{% include team-card.html team=t %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="section__title">How the program fits together</h2>
+    <p class="section__lede">
+      +3 Robotics is our JV team, and Valley X is varsity. Students build skills on +3, then move up,
+      so every Valley X robot is designed by people who already know the season's rhythm.
+    </p>
+    {% include pathway.html %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">FTC vs. FRC</h2>
+    <div class="table-wrap">
+      <table class="compare">
+        <thead>
+          <tr><th scope="col"></th><th scope="col"><em>FIRST</em> Tech Challenge</th><th scope="col"><em>FIRST</em> Robotics Competition</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Our teams</th><td>2844 Valley X (varsity), 12841 +3 (JV)</td><td>8848 BLU CRU</td></tr>
+          <tr><th scope="row">Grades</th><td>7–12</td><td>9–12</td></tr>
+          <tr><th scope="row">Team size</th><td>Up to 15 students</td><td>25+ students</td></tr>
+          <tr><th scope="row">Field</th><td>12 ft × 12 ft, new game every season</td><td>Full-size field, complex game</td></tr>
+          <tr><th scope="row">Season</th><td>Kickoff in September, Arizona qualifiers and State through February</td><td>Kickoff in January, regionals in spring</td></tr>
+          <tr><th scope="row">Focus</th><td>Robot design, programming, outreach, and gracious professionalism</td><td>Industrial-scale engineering, fundraising, business planning, and community engagement</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+{% include cta.html %}

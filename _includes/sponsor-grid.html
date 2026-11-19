@@ -1,0 +1,10 @@
+<ul class="sponsor-grid{% if include.compact %} sponsor-grid--compact{% endif %}">
+  {% for s in include.sponsors %}
+  <li class="sponsor">
+    {% if s.url %}<a class="sponsor__inner" href="{{ s.url }}" rel="noopener">{% else %}<span class="sponsor__inner">{% endif %}
+      {% if s.logo %}<img src="{{ s.logo | relative_url }}" alt="{{ s.name }}" loading="lazy">{% else %}<span class="sponsor__name">{{ s.name }}</span>{% endif %}
+      {% if s.note and include.compact == nil %}<span class="sponsor__note">{{ s.note }}</span>{% endif %}
+    {% if s.url %}</a>{% else %}</span>{% endif %}
+  </li>
+  {% endfor %}
+</ul>

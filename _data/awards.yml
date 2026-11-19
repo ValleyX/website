@@ -1,0 +1,220 @@
+# Source: FIRST official event records (ftc-events / frc-events.firstinspires.org).
+# Newest season first. Mark an award `major: true` to highlight it.
+# FIRST's online records start in 2019, so earlier seasons are only listed where verified.
+
+"2844":
+  - season: "2026–27"
+    game: BIOBUZZ
+    awards:
+      - award: Inspire Award, 3rd Place
+        event: Roadrunner – Gilbert Qualifier
+  - season: "2025–26"
+    game: DECODE
+    awards:
+      - award: Inspire Award
+        event: Saguaro Blossom – Microchip Qualifier #2
+        major: true
+      - award: Finalist Alliance, 1st Team Selected
+        event: Saguaro Blossom – Microchip Qualifier #2
+      - award: Finalist Alliance, Captain
+        event: Copper – Queen Creek Qualifier
+      - award: Think Award, 2nd Place
+        event: Copper – Queen Creek Qualifier
+      - award: Grand Canyon Division Finalist Alliance, Captain
+        event: Arizona Championship
+  - season: "2024–25"
+    game: INTO THE DEEP
+    awards:
+      - award: Grand Canyon Division Winning Alliance, Captain
+        event: Arizona Championship
+        major: true
+      - award: Design Award
+        event: Arizona Championship
+      - award: Finalist Alliance, Captain
+        event: Arizona Championship
+      - award: Connect Award
+        event: Roadrunner – Gilbert Qualifier
+      - award: Finalist Alliance, 1st Team Selected
+        event: Diamondback – Tucson Qualifier
+  - season: "2023–24"
+    game: CENTERSTAGE
+    awards:
+      - award: Inspire Award
+        event: High Country – Flagstaff Qualifier
+        major: true
+      - award: Finalist Alliance, Captain
+        event: High Country – Flagstaff Qualifier
+      - award: Winning Alliance, Captain
+        event: Roadrunner – Gilbert Qualifier
+        major: true
+      - award: Design Award
+        event: Roadrunner – Gilbert Qualifier
+      - award: Innovate Award, 2nd Place
+        event: Roadrunner – Gilbert Qualifier
+      - award: Innovate Award, 2nd Place
+        event: Copper – Queen Creek Qualifier
+      - award: Innovate Award, 2nd Place
+        event: Arizona Championship
+  - season: "2022–23"
+    game: POWERPLAY
+    awards:
+      - award: Design Award, 3rd Place
+        event: Arizona Championship
+      - award: Inspire Award, 3rd Place
+        event: Cactus – Anthem Qualifier
+      - award: Design Award
+        event: Cactus – Anthem Qualifier
+      - award: Finalist Alliance, Captain
+        event: Cactus – Anthem Qualifier
+      - award: Think Award, 2nd Place
+        event: Cactus – Anthem Qualifier
+      - award: Design Award
+        event: Roadrunner – Gilbert Qualifier
+      - award: Connect Award, 2nd Place
+        event: Roadrunner – Gilbert Qualifier
+      - award: Motivate Award, 2nd Place
+        event: Roadrunner – Gilbert Qualifier
+      - award: Innovate Award, 3rd Place
+        event: Desert Vista – Waddell Qualifier
+  - season: "2021–22"
+    game: FREIGHT FRENZY
+    awards:
+      - award: Innovate Award
+        event: Arizona Championship
+      - award: Finalist Alliance, Captain
+        event: Arizona Championship – Grand Canyon Division
+      - award: Innovate Award
+        event: Cactus Wren Qualifier
+      - award: Finalist Alliance, 1st Team Selected
+        event: Cactus Wren Qualifier
+      - award: Design Award
+        event: Saguaro Blossom Qualifier
+      - award: Innovate Award, 2nd Place
+        event: Saguaro Blossom Qualifier
+      - award: Finalist Alliance, 1st Team Selected
+        event: Saguaro Blossom Qualifier
+  - season: "2020–21"
+    game: ULTIMATE GOAL
+    awards:
+      - award: Innovate Award, 3rd Place
+        event: Arizona Championship (Remote)
+      - award: Innovate Award
+        event: Desert Vista Qualifier (Remote)
+      - award: Innovate Award, 2nd Place
+        event: Palo Verde Qualifier (Remote)
+      - award: Design Award
+        event: Palo Verde Qualifier (Remote)
+      - award: Top Ranked, 3rd Place
+        event: Palo Verde Qualifier (Remote)
+      - award: Control Award, 3rd Place
+        event: Turquoise Qualifier (Remote)
+  - season: "2019–20"
+    game: SKYSTONE
+    awards:
+      - award: Winning Alliance, 2nd Team Selected
+        event: Gilbert Qualifying Tournament
+        major: true
+      - award: Innovate Award
+        event: West Valley Qualifying Tournament
+      - award: Inspire Award, 3rd Place
+        event: West Valley Qualifying Tournament
+      - award: Design Award, 2nd Place
+        event: West Valley Qualifying Tournament
+      - award: Control Award, 3rd Place
+        event: West Valley Qualifying Tournament
+  - season: "2014–15"
+    game: CASCADE EFFECT
+    awards:
+      - award: World Championship Winning Alliance, 2nd Team Selected
+        event: FIRST Championship, St. Louis
+        major: true
+      - award: Silicon Division Finalist Alliance
+        event: West Super-Regional, Oakland
+
+"12841":
+  - season: "2025–26"
+    game: DECODE
+    awards:
+      - award: Grand Canyon Division Finalist Alliance, 1st Team Selected
+        event: Arizona Championship
+      - award: Reach Award, 3rd Place
+        event: Arizona Championship
+      - award: Think Award
+        event: Saguaro Blossom – Microchip Qualifier #2
+      - award: Design Award, 2nd Place
+        event: Copper – Queen Creek Qualifier
+      - award: Finalist Alliance, 1st Team Selected
+        event: Copper – Queen Creek Qualifier
+  - season: "2024–25"
+    game: INTO THE DEEP
+    awards:
+      - award: Winning Alliance, 1st Team Selected
+        event: Copper – Queen Creek Qualifier
+        major: true
+      - award: Inspire Award, 2nd Place
+        event: Copper – Queen Creek Qualifier
+      - award: Control Award
+        event: Roadrunner – Gilbert Qualifier
+  - season: "2023–24"
+    game: CENTERSTAGE
+    awards:
+      - award: Winning Alliance, 1st Team Selected
+        event: High Country – Flagstaff Qualifier
+        major: true
+      - award: Inspire Award, 2nd Place
+        event: High Country – Flagstaff Qualifier
+      - award: Control Award
+        event: High Country – Flagstaff Qualifier
+      - award: Control Award, 2nd Place
+        event: Arizona Championship
+      - award: Motivate Award, 3rd Place
+        event: Copper – Queen Creek Qualifier
+  - season: "2022–23"
+    game: POWERPLAY
+    awards:
+      - award: Saguaro Division Finalist Alliance, 2nd Team Selected
+        event: Arizona Championship
+      - award: Winning Alliance, 1st Team Selected
+        event: Cactus – Anthem Qualifier
+        major: true
+      - award: Innovate Award, 3rd Place
+        event: Cactus – Anthem Qualifier
+      - award: Design Award, 2nd Place
+        event: Roadrunner – Gilbert Qualifier
+      - award: Innovate Award, 3rd Place
+        event: Roadrunner – Gilbert Qualifier
+      - award: Finalist Alliance, 1st Team Selected
+        event: Roadrunner – Gilbert Qualifier
+      - award: Design Award, 2nd Place
+        event: Desert Vista – Waddell Qualifier
+      - award: Control Award, 3rd Place
+        event: Desert Vista – Waddell Qualifier
+  - season: "2021–22"
+    game: FREIGHT FRENZY
+    awards:
+      - award: Innovate Award
+        event: Saguaro Blossom Qualifier
+      - award: Design Award, 3rd Place
+        event: Saguaro Blossom Qualifier
+      - award: Think Award, 3rd Place
+        event: Saguaro Blossom Qualifier
+  - season: "2020–21"
+    game: ULTIMATE GOAL
+    awards:
+      - award: Judges' Award
+        event: Palo Verde Qualifier (Remote)
+
+"8848":
+  - season: "2023"
+    game: CHARGED UP
+    awards:
+      - award: Industrial Design Award
+        event: Arizona West Regional
+  - season: "2022"
+    game: RAPID REACT
+    awards:
+      - award: Rookie All Star Award
+        event: Arizona Valley Regional
+        major: true
+      - award: Highest Rookie Seed
+        event: Arizona Valley Regional

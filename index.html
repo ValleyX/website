@@ -1,0 +1,149 @@
+---
+layout: default
+title: Made for God, Powered by God
+description: >-
+  VCS Robotics is the FIRST robotics program at Valley Christian Schools in Chandler, Arizona:
+  FTC 2844 Valley X (varsity, 2015 World Champions), FTC 12841 +3 Robotics (JV), and FRC 8848 BLU CRU.
+---
+{% assign award_all = 0 %}
+{% for team in site.data.teams %}
+  {% assign team_seasons = site.data.awards[team.id] %}
+  {% include award-count.html seasons=team_seasons %}
+  {% assign award_all = award_all | plus: award_total %}
+{% endfor %}
+
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow">Valley Christian Schools · Chandler, Arizona</p>
+      <h1>Three teams. One program. <span class="hero__accent">Made for God, powered by God.</span></h1>
+      <p class="lede">
+        VCS Robotics designs, builds, and programs competition robots in <em>FIRST</em> Tech Challenge and
+        <em>FIRST</em> Robotics Competition, and has since 2008.
+      </p>
+      <div class="actions">
+        <a class="btn btn--primary" href="{{ '/teams/' | relative_url }}">Meet the teams</a>
+        <a class="btn btn--ghost" href="{{ '/sponsors/' | relative_url }}">Support the program</a>
+      </div>
+    </div>
+    <ul class="hero__teams" aria-label="Our teams">
+      {% for t in site.data.teams %}
+      <li>
+        <a class="hero-team hero-team--{{ t.id }}" href="{{ t.url | relative_url }}">
+          <span class="hero-team__num mono">{{ t.number }}</span>
+          <span class="hero-team__meta"><strong>{{ t.name }}</strong><span>{{ t.program }} · {{ t.level }}</span></span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="stat-band" aria-label="Program at a glance">
+  <div class="container stat-band__grid">
+    <div class="stat"><span class="stat__value mono">2008</span><span class="stat__label">Founded</span></div>
+    <div class="stat stat--gold"><span class="stat__value mono">2015</span><span class="stat__label">FTC World Champions</span></div>
+    <div class="stat"><span class="stat__value mono">3</span><span class="stat__label">Teams in FTC &amp; FRC</span></div>
+    <div class="stat"><span class="stat__value mono">{{ award_all }}</span><span class="stat__label">Awards on record</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow eyebrow--dark">The program</p>
+        <h2 class="section__title">One pathway, from first robot to World Championship</h2>
+      </div>
+    </div>
+    <p class="section__lede">
+      New members start on our JV team, +3 Robotics. As they grow, they move up to varsity, Valley X.
+      Because JV feeds varsity, the program keeps itself going year after year.
+    </p>
+    {% include pathway.html %}
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="section__title">Our teams</h2>
+    <div class="team-grid">
+      {% for t in site.data.teams %}{% include team-card.html team=t %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <p class="eyebrow">Why we build</p>
+    <h2 class="section__title">Culture changers for Christ</h2>
+    <div class="mvv">
+      <article class="mvv__item">
+        <h3>Mission</h3>
+        <p>Equip students to be culture changers for Christ through hands-on STEM, Christ-centered mentorship, and collaborative innovation.</p>
+      </article>
+      <article class="mvv__item">
+        <h3>Vision</h3>
+        <p>Create a Christ-centered robotics community where students excel in science, grow spiritually, and lead with integrity.</p>
+      </article>
+      <article class="mvv__item">
+        <h3>Values</h3>
+        <ul class="values">
+          <li>Honor Christ</li>
+          <li>Pursue excellence</li>
+          <li>Build community</li>
+          <li>Change culture</li>
+          <li>Partner with parents and local churches</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">Latest from the field</h2>
+      <a class="text-link" href="{{ '/awards/' | relative_url }}">Full results →</a>
+    </div>
+    <div class="updates">
+      {% for u in site.data.updates limit: 3 %}
+      <article class="update">
+        <time class="update__date mono" datetime="{{ u.date | date: '%Y-%m-%d' }}">{{ u.date | date: "%b %-d, %Y" }}</time>
+        <h3>{{ u.title }}</h3>
+        <p>{{ u.body }}</p>
+        <p class="update__teams">{% for id in u.teams %}<span class="badge badge--{{ id }}">{{ id }}</span>{% endfor %}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container feature-pair">
+    <a class="feature" href="{{ '/engineering/' | relative_url }}">
+      <p class="eyebrow eyebrow--dark">Engineering</p>
+      <h3>We write our own tools, then share them.</h3>
+      <p>ValleyLib is our open-source command-based library for FTC and FRC. Apex Scout is our offline scouting app, used by 70+ people on more than 10 teams.</p>
+      <span class="text-link">See how we build →</span>
+    </a>
+    <a class="feature" href="{{ '/outreach/' | relative_url }}">
+      <p class="eyebrow eyebrow--dark">Outreach</p>
+      <h3>We host the Arizona FIRST Kickoff.</h3>
+      <p>For three years running, VCS Robotics has hosted and run the season kickoff for FTC teams across Arizona, with 86 teams at the latest one.</p>
+      <span class="text-link">See our outreach →</span>
+    </a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">Thank you to our {{ site.current_season.label }} sponsors</h2>
+      <a class="text-link" href="{{ '/sponsors/' | relative_url }}">Become a sponsor →</a>
+    </div>
+    {% include sponsor-grid.html sponsors=site.data.sponsors.current compact=true %}
+  </div>
+</section>
+
+{% include cta.html %}

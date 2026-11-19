@@ -1,0 +1,83 @@
+---
+layout: default
+---
+{% assign team = site.data.teams | where: "id", page.team | first %}
+{% assign seasons = site.data.awards[team.id] %}
+{% include award-count.html seasons=seasons %}
+
+<section class="page-hero team-hero team-hero--{{ team.id }}">
+  <div class="container team-hero__inner">
+    <div>
+      <p class="eyebrow">{{ team.program_long }} · {{ team.level }}</p>
+      <h1>{{ team.name }}</h1>
+      <p class="lede">{{ team.tagline }}</p>
+    </div>
+    <p class="team-hero__number mono" aria-hidden="true">{{ team.number }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <dl class="facts">
+      {% for f in team.facts %}
+      <div class="fact"><dt>{{ f.label }}</dt><dd class="mono">{{ f.value }}</dd></div>
+      {% endfor %}
+      <div class="fact"><dt>Awards on record</dt><dd class="mono">{{ award_total }}</dd></div>
+    </dl>
+
+    <div class="split">
+      <div class="prose">
+        <h2>About {{ team.short }}</h2>
+        <p>{{ team.summary }}</p>
+        {{ content }}
+      </div>
+      <aside class="side-card">
+        <h2 class="side-card__title">Team {{ team.number }}</h2>
+        <dl class="side-card__list">
+          <div><dt>Program</dt><dd>{{ team.program_long }}</dd></div>
+          <div><dt>Level</dt><dd>{{ team.level }}</dd></div>
+          <div><dt>Grades</dt><dd>{{ team.grades }}</dd></div>
+          <div><dt>Since</dt><dd>{{ team.rookie_year }}</dd></div>
+        </dl>
+        <a class="side-card__link" href="{{ team.first_url }}" rel="noopener">Official FIRST record ↗</a>
+        <a class="side-card__link" href="{{ team.scout_url }}" rel="noopener">Match stats ↗</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="section__title">Highlights</h2>
+    <div class="highlight-grid">
+      {% for h in team.highlights %}
+      <article class="highlight highlight--{{ team.id }}">
+        <h3>{{ h.title }}</h3>
+        <p>{{ h.body }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    {% if team.robots %}
+    <h3 class="section__subtitle">Robots</h3>
+    <ul class="robot-list">
+      {% for r in team.robots %}
+      <li><span class="mono">{{ r.season }}</span><strong>{{ r.name }}</strong></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">Awards by season</h2>
+      <a class="text-link" href="{{ '/awards/' | relative_url }}">All program awards →</a>
+    </div>
+    <div class="season-grid">
+      {% for s in seasons %}{% include award-season.html season=s %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include cta.html %}

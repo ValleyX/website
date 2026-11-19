@@ -1,0 +1,50 @@
+title: VCS Robotics
+tagline: Made for God, Powered by God
+description: >-
+  The robotics program at Valley Christian Schools in Chandler, Arizona: FTC 2844
+  Valley X Robotics (varsity), FTC 12841 +3 Robotics (JV), and FRC 8848 BLU CRU.
+
+url: "https://vcs-robotics.com"
+baseurl: ""
+lang: en_US
+
+contact_email: robotics@valleychristianaz.org
+github_url: https://github.com/ValleyX
+school:
+  name: Valley Christian Schools
+  url: https://valleychristianaz.org
+  city: Chandler, Arizona
+
+# Shown in the header ribbon and on the home page. Update each September.
+current_season:
+  label: "2026–27"
+  game: BIOBUZZ
+
+logo: /assets/img/logo.png
+social:
+  name: VCS Robotics
+  links: []
+
+theme: null
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+      image: /assets/img/og-card.png
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle

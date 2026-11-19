@@ -1,0 +1,110 @@
+---
+title: Engineering
+eyebrow: How we build
+heading: Engineering
+lede: >-
+  Strategy first, then a design process we run every season, plus software we write ourselves and
+  publish for any team to use.
+description: >-
+  How VCS Robotics designs its robots, and the open-source software it builds: ValleyLib and Apex Scout.
+---
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">Our design process</h2>
+    <ol class="process">
+      <li><span class="mono">01</span><strong>Define</strong><span>Read the game and decide what is worth scoring.</span></li>
+      <li><span class="mono">02</span><strong>Brainstorm</strong><span>Generate several concepts for every mechanism.</span></li>
+      <li><span class="mono">03</span><strong>Design</strong><span>Model the winner in CAD.</span></li>
+      <li><span class="mono">04</span><strong>Prototype</strong><span>Build it fast and cheap.</span></li>
+      <li><span class="mono">05</span><strong>Test</strong><span>Measure it against the requirements.</span></li>
+      <li><span class="mono">06</span><strong>Iterate</strong><span>Fix what the data says, then do it again.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <p class="eyebrow eyebrow--dark">FTC 2844 · {{ site.current_season.label }} · {{ site.current_season.game }}</p>
+    <h2 class="section__title">This season's Valley X robot</h2>
+    <p class="section__lede">
+      Last season's robot took too many steps to do simple things. So this year, every decision answers
+      to five requirements:
+    </p>
+    <ul class="pill-list">
+      <li>Simplicity</li><li>Speed</li><li>Reliability</li><li>Accuracy</li><li>Coding ease</li>
+    </ul>
+
+    <div class="spec-grid">
+      <article class="spec">
+        <h3>Strategy</h3>
+        <p>We score only in the hive. It's faster than the alternatives and earns a ranking point.</p>
+      </article>
+      <article class="spec">
+        <h3>Turret shooter</h3>
+        <p>We compared four shooter concepts and chose a dual-turret design for speed. A 6,000 RPM goBILDA motor drives four flywheels, with added steel mass so speed holds from the first shot to the last.</p>
+      </article>
+      <article class="spec">
+        <h3>Aim from anywhere</h3>
+        <p>A gear-driven goBILDA turret gives 332° of rotation with no belts or custom parts. The hood angle comes from a projectile-motion equation, so one launch speed scores from anywhere on the field.</p>
+      </article>
+      <article class="spec">
+        <h3>Drivetrain</h3>
+        <p>Four 435 RPM motors on mecanum wheels let the robot strafe and line up a shot from any angle.</p>
+      </article>
+      <article class="spec">
+        <h3>Smart intake</h3>
+        <p>Beam-break sensors count game pieces. At four, the intake shuts off and the shooter spins up, so the two never run at once.</p>
+      </article>
+      <article class="spec">
+        <h3>Autonomous</h3>
+        <p>A goBILDA Pinpoint tracks position and heading all match long. A Limelight reads AprilTags to aim the turret, with trigonometry from our position as the fallback. One base auto mirrors for either alliance, so we can write a new routine for a partner fast.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p class="eyebrow eyebrow--dark">Software</p>
+    <h2 class="section__title">Tools we built, and share</h2>
+    <div class="software-grid">
+      <article class="software">
+        <header class="software__head">
+          <h3>ValleyLib</h3>
+          <span class="badge">Open source</span>
+        </header>
+        <p>
+          A command-based robotics library for FTC and FRC. Traditional FTC code runs everything through one
+          giant loop, so adding a mechanism means touching everything. In ValleyLib, each mechanism is a
+          subsystem, each action is a command, and a scheduler keeps two commands from fighting over the same
+          motor. It also supports Pedro Pathing, which FTCLib doesn't.
+        </p>
+        <ul class="mini-stats">
+          <li><strong class="mono">20 → 4</strong><span>lines for a typical action</span></li>
+          <li><strong class="mono">66</strong><span>automated tests that run on a laptop</span></li>
+          <li><strong class="mono">5,000+</strong><span>lines of code</span></li>
+        </ul>
+        <a class="btn btn--primary btn--small" href="https://github.com/ValleyX/valleyLib" rel="noopener">View on GitHub</a>
+      </article>
+      <article class="software">
+        <header class="software__head">
+          <h3>Apex Scout</h3>
+          <span class="badge">Scouting app</span>
+        </header>
+        <p>
+          Our scouting app works fully offline and moves data between devices with QR codes. A dashboard combines
+          weighted rankings with official <em>FIRST</em> data, and a pit display tells teams when to queue.
+          Each team's data is private to that team.
+        </p>
+        <ul class="mini-stats">
+          <li><strong class="mono">70+</strong><span>users</span></li>
+          <li><strong class="mono">10+</strong><span>teams</span></li>
+          <li><strong class="mono">0</strong><span>internet needed. Used at AZ State and Western Edge</span></li>
+        </ul>
+      </article>
+    </div>
+    <p class="note">All of our code is public at <a href="{{ site.github_url }}">github.com/ValleyX</a>.</p>
+  </div>
+</section>
+
+{% include cta.html %}

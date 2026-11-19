@@ -1,0 +1,24 @@
+# Current-season sponsors, from the 2026–27 FIRST team registrations.
+# Optional fields: url, logo (path under /assets/img/sponsors/), note.
+current:
+  - name: Valley Christian Schools
+    url: https://valleychristianaz.org
+    note: Home of the program
+  - name: Dassault Systèmes / SOLIDWORKS
+    url: https://www.solidworks.com
+  - name: QTS Data Centers
+    url: https://qtsdatacenters.com
+  - name: Rainey Renovations
+  - name: Pedal Power Generator
+
+# Organizations that have supported VCS Robotics teams in past seasons.
+past:
+  - name: Boeing
+  - name: General Dynamics
+  - name: SendCutSend
+  - name: Professional Plastics
+  - name: Arconic Foundation
+  - name: United Metal Products
+  - name: SOAR – Simoncic's Opportunities in Arts and Robotics
+  - name: Mesa Sales
+  - name: Cesar's Floor Coverings

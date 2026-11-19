@@ -1,0 +1,11 @@
+{% assign t = include.team %}
+<a class="team-card team-card--{{ t.id }}" href="{{ t.url | relative_url }}">
+  <span class="team-card__top">
+    <span class="team-card__program mono">{{ t.program }}</span>
+    <span class="badge badge--{{ t.id }}">{{ t.level }}</span>
+  </span>
+  <span class="team-card__number mono">{{ t.number }}</span>
+  <span class="team-card__name">{{ t.name }}</span>
+  <span class="team-card__tagline">{{ t.tagline }}</span>
+  <span class="team-card__link">Meet {{ t.short }} <span aria-hidden="true">→</span></span>
+</a>

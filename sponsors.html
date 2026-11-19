@@ -1,0 +1,50 @@
+---
+title: Sponsors
+eyebrow: Partners
+heading: Sponsors
+lede: >-
+  Every robot we build, every event we attend, and every student we train is made possible by
+  the businesses and families who back us.
+description: >-
+  The sponsors behind VCS Robotics, and how your company can support FTC 2844, FTC 12841, and FRC 8848.
+---
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">{{ site.current_season.label }} sponsors</h2>
+    {% include sponsor-grid.html sponsors=site.data.sponsors.current %}
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container split split--even">
+    <div class="prose">
+      <h2>Why sponsor VCS Robotics</h2>
+      <p>
+        This season we raised $35,500, enough to fund our entire season. Sponsorship covers what it takes to
+        compete: <em>FIRST</em> registration, robot parts and materials, practice field elements, tools, and travel
+        to events like State and Premier Events.
+      </p>
+      <p>
+        In return, you're backing students who are learning engineering, programming, and leadership on real
+        deadlines, many of whom go on to study and work in STEM.
+      </p>
+    </div>
+    <div class="give-card">
+      <h3>Ways to help</h3>
+      <ul class="check-list">
+        <li><strong>Financial support</strong> for registration, parts, and travel</li>
+        <li><strong>In-kind donations</strong> such as machining, materials, software, or tools</li>
+        <li><strong>Mentorship</strong> from engineers, programmers, and business professionals</li>
+      </ul>
+      <a class="btn btn--gold" href="mailto:{{ site.contact_email }}?subject=Sponsoring%20VCS%20Robotics">Talk to us about sponsoring</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">Past supporters</h2>
+    <p class="section__lede">Thank you to the organizations that have supported VCS Robotics teams in previous seasons.</p>
+    {% include sponsor-grid.html sponsors=site.data.sponsors.past compact=true %}
+  </div>
+</section>
