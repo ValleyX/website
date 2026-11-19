@@ -1,0 +1,255 @@
+---
+title: Engineering
+eyebrow: How we build
+heading: Engineering
+lede: >-
+  Strategy first, a design process we run every season, and software we write ourselves and publish
+  for any team to use.
+description: >-
+  How Valley X designs its robots: Born Yesterday, the 48-hour beta of our main robot, the dual-turret
+  main robot in the works, and the open-source tools we build: ValleyLib, valleyVis, and Apex Scout.
+---
+<section class="section">
+  <div class="container">
+    <p class="eyebrow eyebrow--dark">{{ site.current_season.label }} · {{ site.current_season.game }}</p>
+    <h2 class="section__title">Strategy first</h2>
+    <div class="split split--even">
+      <div class="prose">
+        <p>
+          Last season, our robot was overly complex: it took too many steps to do simple tasks. So this year
+          we started with strategy. After analyzing the game, we decided to score only in the hive. It's
+          faster, it's more efficient, and it earns a ranking point. The flowers don't.
+        </p>
+        <p>That strategy produced five requirements that every mechanism has to answer to:</p>
+        <ul class="pill-list">
+          <li>Simplicity</li><li>Speed</li><li>Reliability</li><li>Accuracy</li><li>Coding ease</li>
+        </ul>
+      </div>
+      {% include photo.html name="strategy-session" alt="Students from +3 and Valley X map out game strategy on a whiteboard grid." w=987 h=519 caption="Valley X and +3 working through game strategy together." %}
+    </div>
+
+    <h3 class="section__subtitle">Our design process</h3>
+    <ol class="process">
+      <li><span class="mono">01</span><strong>Define</strong><span>Understand the problem or task.</span></li>
+      <li><span class="mono">02</span><strong>Brainstorm</strong><span>Come up with several possible solutions.</span></li>
+      <li><span class="mono">03</span><strong>Design</strong><span>Draw it, CAD it, and plan concrete steps.</span></li>
+      <li><span class="mono">04</span><strong>Prototype</strong><span>Build the physical design.</span></li>
+      <li><span class="mono">05</span><strong>Test</strong><span>Run it and record how it performs.</span></li>
+      <li><span class="mono">06</span><strong>Iterate</strong><span>Feed what we learned back into step one.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--alt" id="competition-robot">
+  <div class="container">
+    <p class="eyebrow eyebrow--dark">Current robot · Beta</p>
+    <h2 class="section__title">Born Yesterday: a robot in under 48 hours</h2>
+    <p class="section__lede">
+      Born Yesterday is our current competition robot, and a beta version of our main robot, which is still
+      in the works.
+    </p>
+    <div class="split split--even">
+      <div class="prose">
+        <p>
+          We planned to compete with our main robot, but it needed more time to iterate. On Wednesday,
+          November 11, three days before the Roadrunner – Gilbert Qualifier, we decided to design, build, and
+          program a beta version instead. We finished it in less than 48 hours, and it earned the
+          <strong>Inspire Award 3rd Place</strong>.
+        </p>
+        <p>
+          We built it mostly from goBILDA components, which made it fast to iterate and easy to change after
+          assembly. Custom parts are hard to modify once a robot is together, and not everything can be
+          predicted. What we learn from Born Yesterday goes straight into the main robot, which will combine
+          mostly manufactured parts with custom elements.
+        </p>
+        <h3>Pollen path</h3>
+        <ol class="steps">
+          <li>goBILDA Gecko Wheels pull pollen into the robot.</li>
+          <li>A belt-driven throughput carries it to the shooter.</li>
+          <li>The 6,000 RPM shooter launches it into the hive.</li>
+        </ol>
+        <p>
+          The throughput's pulley rides on a bearing, so it shares the shooter's axle but spins independently
+          and never slows the shooter down.
+        </p>
+      </div>
+      <div>
+        {% include photo.html name="robot-born-yesterday" alt="Born Yesterday, the goBILDA beta robot, launching a yellow pollen ball." w=1163 h=827 %}
+        <dl class="spec-list">
+          <div><dt>Size</dt><dd>15" × 15½" × 13½"</dd></div>
+          <div><dt>Drivetrain</dt><dd>Four 435 RPM motors</dd></div>
+          <div><dt>Intake</dt><dd>1150 RPM motor, goBILDA Gecko Wheels</dd></div>
+          <div><dt>Throughput</dt><dd>1150 RPM motor, belt-driven</dd></div>
+          <div><dt>Shooter</dt><dd>6,000 RPM motor</dd></div>
+          <div><dt>Build</dt><dd>Primarily goBILDA</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="gallery">
+      {% include photo.html name="robot-side" alt="Side view of Born Yesterday on the field." w=698 h=478 %}
+      {% include photo.html name="robot-top" alt="Top view of Born Yesterday holding two pollen balls." w=697 h=478 %}
+      {% include photo.html name="robot-front" alt="Front view of Born Yesterday on the field tiles." w=698 h=479 %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="main-robot">
+  <div class="container">
+    <p class="eyebrow eyebrow--dark">In the works</p>
+    <h2 class="section__title">Our main robot</h2>
+    <p class="section__lede">
+      Born Yesterday is the beta; this is the full version, and it's still in the works. It's built around a
+      dual-turret design that we picked over a variable-width shooter, two fixed shooters, and a single
+      shooter with a compliant wheel.
+    </p>
+    <div class="mech-grid">
+      <article class="mech">
+        {% include photo.html name="custom-turret" alt="Turret assembly with a goBILDA motor driving the flywheel shooter." w=1130 h=1209 %}
+        <div class="mech__body">
+          <h3>Dual turret</h3>
+          <p>
+            Steel-weighted flywheels hold speed from the first shot to the last. goBILDA's gear-driven turret
+            turns straight from a gear, with no belts or custom parts. The hood angle comes from a
+            projectile-motion equation, so one launch speed can score from anywhere on the field. The pollen
+            turret is built; the nectar turret is already in CAD.
+          </p>
+          <p class="formula mono">θ = tan⁻¹[(v² − √(v⁴ − g(gd² + 2hv²))) / gd]</p>
+          <ul class="mech__specs">
+            <li>6,000 RPM goBILDA motor</li>
+            <li>Offset Robotics servo on the hood</li>
+            <li>2 Axon servos guide the turret</li>
+            <li>4 goBILDA flywheels, 115 g each</li>
+            <li>332° of rotation</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mech">
+        {% include photo.html name="custom-intake" alt="The custom intake assembly with rows of compliant wheels, on a workbench." w=1590 h=1147 %}
+        <div class="mech__body">
+          <h3>Intake</h3>
+          <p>
+            Twelve compliant wheels pull pollen in while beam-break sensors count each piece. At four, the
+            intake shuts off and the shooter spins up. Pollen only moves to the turret when the shooter is at
+            speed and aimed, and the outer bar slides under a flower to pull its pollen out.
+          </p>
+          <ul class="mech__specs">
+            <li>6,000 RPM motor, 12 compliant wheels</li>
+            <li>Beam breaks count pollen</li>
+            <li>Holds four, then shuts off automatically</li>
+            <li>Lowers at the start of TeleOp</li>
+          </ul>
+        </div>
+      </article>
+      <article class="mech">
+        {% include photo.html name="custom-drive-motors" alt="Two drivetrain motors mounted to an aluminum chassis plate." w=1286 h=824 %}
+        <div class="mech__body">
+          <h3>Drivetrain</h3>
+          <p>
+            Mecanum wheels let the robot drive, strafe, and rotate at once, so it can line up a shot without
+            turning first. Mecanum gives up some traction and pushing power, but our strategy values mobility
+            over defense.
+          </p>
+          <ul class="mech__specs">
+            <li>Four 435 RPM motors</li>
+            <li>Mecanum wheels</li>
+            <li>goBILDA Pinpoint with odometry pods</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark" id="software-control">
+  <div class="container">
+    <p class="eyebrow">Autonomous &amp; control</p>
+    <h2 class="section__title">Code that survived a rebuild</h2>
+    <div class="control-grid">
+      <article class="control">
+        <h3>Routines + geometry</h3>
+        <p>Every auto is a routine (what to do), a geometry (where to go), and an identifier. One base auto runs them and mirrors the moves for either alliance, so we can build a new auto for a partner fast.</p>
+      </article>
+      <article class="control">
+        <h3>Localization</h3>
+        <p>A goBILDA Pinpoint combines IMU data with odometry pods to track position and heading all match. Auto hands its position to TeleOp, so nothing needs resetting.</p>
+      </article>
+      <article class="control">
+        <h3>Auto park</h3>
+        <p>The driver holds one button and the robot drives itself to park, even mid-path. In auto, a timeout forces a park before time runs out.</p>
+      </article>
+      <article class="control">
+        <h3>Vision</h3>
+        <p>Vision aims the turret and waits until the hive tips to our side, which makes us more compatible with partners who rely on timed waits.</p>
+      </article>
+      <article class="control">
+        <h3>State machine + triggers</h3>
+        <p>TeleOp runs a finite state machine that switches between intaking and shooting on its own. Global triggers pick the right hive from where the driver lines up, even without vision.</p>
+      </article>
+      <article class="control">
+        <h3>Built to adapt</h3>
+        <p>When we built Born Yesterday in 48 hours, most of the main robot's code carried straight over. Subsystems needed new names and a few values; commands didn't change at all.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="software">
+  <div class="container">
+    <p class="eyebrow eyebrow--dark">Software</p>
+    <h2 class="section__title">Tools we built, and share</h2>
+    <div class="software-grid software-grid--3">
+      <article class="software">
+        <header class="software__head">
+          <h3>ValleyLib</h3>
+          <span class="badge">Open source</span>
+        </header>
+        <p>
+          A command-based library made for FTC and FRC. Each mechanism is a subsystem, each action is a command,
+          and the scheduler keeps two commands from fighting over a motor. Unlike FTCLib, it supports Pedro Pathing.
+        </p>
+        <pre class="code"><code>PedroAutoDsl.auto(drive, auto -&gt; auto
+    .follow(mainPath)
+    .waitUntilDriveIdle()
+    .action(() -&gt; telemetryBus.put("Status", "Done")));</code></pre>
+        <ul class="mini-stats">
+          <li><strong class="mono">20 → 4</strong><span>lines for code like this</span></li>
+          <li><strong class="mono">66</strong><span>automated tests</span></li>
+          <li><strong class="mono">10</strong><span>releases in two seasons</span></li>
+        </ul>
+        <a class="btn btn--primary btn--small" href="{{ site.valleylib_url }}" rel="noopener">View on GitHub</a>
+      </article>
+      <article class="software">
+        <header class="software__head">
+          <h3>valleyVis</h3>
+          <span class="badge">Path planner</span>
+        </header>
+        <p>
+          A visual editor for autonomous paths on the BIOBUZZ field, built for ValleyLib and Pedro Pathing. Draw
+          Bézier paths, set headings and speeds, add actions and keep-out zones, then export Java you can paste
+          straight into an auto. It works offline, and share links carry a whole routine.
+        </p>
+        <a class="btn btn--primary btn--small" href="{{ site.valleyvis_url }}" rel="noopener">Open valleyVis</a>
+      </article>
+      <article class="software">
+        <header class="software__head">
+          <h3>Apex Scout</h3>
+          <span class="badge">Scouting app</span>
+        </header>
+        <p>
+          Built by +3 and Valley X. It works fully offline and moves data between devices with QR codes, so
+          hotspots never interfere with matches. Weighted rankings, official <em>FIRST</em> data, and a pit
+          display that tells teams when to queue. Each team's data stays private to that team.
+        </p>
+        <ul class="mini-stats">
+          <li><strong class="mono">70+</strong><span>users</span></li>
+          <li><strong class="mono">10+</strong><span>teams</span></li>
+          <li><strong class="mono">QR</strong><span>sync, no internet</span></li>
+        </ul>
+        <a class="btn btn--primary btn--small" href="{{ site.apex_scout_url }}" rel="noopener">Open Apex Scout</a>
+      </article>
+    </div>
+    <p class="note">More of our code is public at <a href="{{ site.github_url }}">github.com/ValleyX</a>.</p>
+  </div>
+</section>
+
+{% include cta.html %}

@@ -1,0 +1,12 @@
+{% comment %}
+  A photo from /assets/img/photos/ (needs both NAME.webp and NAME.jpg).
+  Usage: {% include photo.html name="valleyx-team" alt="..." w=1385 h=640 caption="..." class="..." eager=true %}
+{% endcomment %}
+{% assign photo_base = '/assets/img/photos/' | append: include.name %}
+<figure class="photo{% if include.class %} {{ include.class }}{% endif %}">
+  <picture>
+    <source srcset="{{ photo_base | append: '.webp' | relative_url }}" type="image/webp">
+    <img src="{{ photo_base | append: '.jpg' | relative_url }}" alt="{{ include.alt }}" width="{{ include.w }}" height="{{ include.h }}"{% unless include.eager %} loading="lazy"{% endunless %} decoding="async">
+  </picture>
+  {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+</figure>

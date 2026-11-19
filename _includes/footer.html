@@ -1,0 +1,44 @@
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <a class="brand brand--light" href="{{ '/' | relative_url }}">
+        {% include logo-mark.html %}
+        <span class="brand__text"><strong>VCS</strong> Robotics</span>
+      </a>
+      <p class="site-footer__motto">{{ site.tagline }}.</p>
+      <p class="site-footer__small">The robotics program at <a href="{{ site.school.url }}">{{ site.school.name }}</a>, {{ site.school.city }}.</p>
+    </div>
+
+    <div>
+      <h2 class="site-footer__heading">Teams</h2>
+      <ul class="site-footer__list">
+        {% for team in site.data.teams %}
+        <li><a href="{{ team.url | relative_url }}"><span class="mono">{{ team.program }} {{ team.number }}</span> {{ team.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="site-footer__heading">Explore</h2>
+      <ul class="site-footer__list">
+        {% for item in site.data.nav %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endfor %}
+        <li><a href="{{ '/join/' | relative_url }}">Join the team</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="site-footer__heading">Contact</h2>
+      <ul class="site-footer__list">
+        <li><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></li>
+        <li>Valley Christian High School<br>6900 W Galveston St<br>Chandler, AZ 85226</li>
+        <li><a href="{{ site.github_url }}">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container site-footer__legal">
+    <p>© {{ site.time | date: "%Y" }} VCS Robotics, Valley Christian Schools.</p>
+    <p><em>FIRST</em>®, FIRST Tech Challenge, and FIRST Robotics Competition are trademarks of <em>FIRST</em>®.</p>
+  </div>
+</footer>

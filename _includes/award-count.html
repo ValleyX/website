@@ -1,0 +1,1 @@
+{% comment %}Sets `award_total` to the number of awards across the passed seasons.{% endcomment %}{% assign award_total = 0 %}{% for s in include.seasons %}{% assign award_total = award_total | plus: s.awards.size %}{% endfor %}

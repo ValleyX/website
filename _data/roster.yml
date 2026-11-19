@@ -1,0 +1,31 @@
+# Student rosters by team, shown on that team's page. First names (plus last initial when needed) only.
+# Update each season.
+"2844":
+  season: "2026–27"
+  members:
+    - name: Carter
+      grade: Senior
+      class_of: "'27"
+      tag: Captain
+      roles: Programming
+    - name: Matt E.
+      grade: Junior
+      class_of: "'28"
+      tag: Co-captain
+      roles: CAD, Build
+    - name: Matt B.
+      grade: Junior
+      class_of: "'28"
+      roles: Build, Marketing, Portfolio
+    - name: Tanner
+      grade: Junior
+      class_of: "'28"
+      roles: Programming, Marketing
+    - name: Keaton
+      grade: Junior
+      class_of: "'28"
+      roles: Build, Marketing, Outreach
+    - name: Zoey
+      grade: Junior
+      class_of: "'28"
+      roles: Build, CAD, Marketing

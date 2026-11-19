@@ -1,0 +1,155 @@
+# One entry per team. Pages under /teams/ read from here.
+# `highlights` show on the team page; `facts` show as the stat row.
+# `photo` is a base name in /assets/img/photos/ (both .webp and .jpg must exist).
+# `status: hiatus` marks a team that isn't competing this season.
+
+- id: "2844"
+  number: "2844"
+  name: Valley X Robotics
+  short: Valley X
+  program: FTC
+  program_long: FIRST Tech Challenge
+  level: Varsity
+  rookie_year: 2008
+  grades: "7–12"
+  current_robot: Born Yesterday
+  url: /teams/2844/
+  first_url: https://ftc-events.firstinspires.org/team/2844
+  scout_url: https://ftcscout.org/teams/2844
+  logo: /assets/img/brand/valleyx-logo-white.png
+  logo_alt: Valley X 2844 logo, 2015 World Champions
+  photo: valleyx-team
+  photo_w: 1385
+  photo_h: 640
+  photo_alt: Four Valley X members in blue team polos stand beside their robot on a cart labeled 2844, 2015 World Champions.
+  photo_caption: Valley X with its competition robot.
+  tagline: Varsity FTC since 2008, and 2015 FIRST Tech Challenge World Champions.
+  summary: >-
+    Valley X is the varsity FIRST Tech Challenge team at Valley Christian High School, and the
+    team the rest of the program grew out of. Now in its 19th season, with six members (up from
+    four last year), Valley X designs, builds, and programs a new robot every year, writes its own
+    open-source software, and runs outreach for teams across Arizona.
+  mission: >-
+    To create a welcoming space where students get hands-on experience in design, CAD, building,
+    and programming. Through the engineering design process, we develop students' STEM skills,
+    teamwork, and leadership, and we work with our community to spread awareness of STEM and
+    FIRST® throughout our region.
+  facts:
+    - value: "2015"
+      label: World Champions
+    - value: "5"
+      label: World Championship trips
+    - value: "18"
+      label: State appearances
+  highlights:
+    - title: 2015 FIRST Tech Challenge World Champions
+      body: >-
+        Second pick on the Franklin Division alliance with 6433 The Neutrinos and 724 RedNek
+        Robotics, which won the World Championship in St. Louis during the Cascade Effect season.
+    - title: Two-time Inspire Award winner
+      body: >-
+        FTC's top honor, won at the 2023 High Country – Flagstaff Qualifier and the 2025
+        Saguaro Blossom – Microchip Qualifier #2.
+    - title: 2024 Arizona Championship division champions
+      body: >-
+        Captained the alliance that won the Grand Canyon Division and reached the state final,
+        and took home the Design Award.
+    - title: DECODE 2025–26
+      body: >-
+        31–17 across five official events: ranked 2nd of 25 in the Arizona Championship's Grand
+        Canyon Division, then earned the team's first Premier Event trip, to Western Edge.
+    - title: BIOBUZZ 2026–27
+      body: >-
+        Built Born Yesterday, a beta version of our main robot, in under 48 hours, then won the
+        Inspire Award 3rd Place at the season-opening Roadrunner – Gilbert Qualifier.
+
+- id: "12841"
+  number: "12841"
+  name: +3 Robotics
+  short: "+3"
+  program: FTC
+  program_long: FIRST Tech Challenge
+  level: JV
+  rookie_year: 2017
+  grades: "7–12"
+  url: /teams/12841/
+  first_url: https://ftc-events.firstinspires.org/team/12841
+  scout_url: https://ftcscout.org/teams/12841
+  photo: strategy-session
+  photo_w: 987
+  photo_h: 519
+  photo_alt: Students from +3 and Valley X map out game strategy on a whiteboard grid.
+  photo_caption: +3 and Valley X planning strategy together.
+  tagline: The JV team that trains the next generation of Valley X.
+  summary: >-
+    +3 Robotics is the program's junior varsity FTC team, now in its 10th season. Members spend at
+    least two years on +3 before they're eligible for varsity, learning the whole engineering cycle
+    (CAD, build, code, drive, and judging) on a real competition robot. +3 is also a contender in
+    its own right, with Inspire, Control, Think, and Design awards and qualifier wins three
+    seasons running.
+  facts:
+    - value: "2017"
+      label: Founded
+    - value: "3"
+      label: Qualifier wins
+    - value: "2 yrs"
+      label: On JV before varsity
+  highlights:
+    - title: Qualifier wins three seasons running
+      body: >-
+        First pick of the winning alliance at the 2022 Cactus – Anthem, 2023 High Country –
+        Flagstaff, and 2024 Copper – Queen Creek qualifiers, with the Inspire Award 2nd Place at
+        Flagstaff and Queen Creek.
+    - title: Control Award specialists
+      body: >-
+        Control Award at Flagstaff in 2023 and at Roadrunner – Gilbert in 2024, plus Control Award
+        2nd Place at the 2023 Arizona Championship.
+    - title: DECODE 2025–26
+      body: >-
+        Think Award at the Microchip Qualifier #2, then picked by Valley X for the Grand Canyon
+        Division finalist alliance at the Arizona Championship, where +3 also earned the Reach
+        Award 3rd Place.
+
+- id: "8848"
+  number: "8848"
+  name: BLU CRU
+  short: BLU CRU
+  program: FRC
+  program_long: FIRST Robotics Competition
+  level: High School
+  status: hiatus
+  status_note: BLU CRU is currently inactive, but may return in a future season.
+  rookie_year: 2022
+  grades: "9–12"
+  url: /teams/8848/
+  first_url: https://frc-events.firstinspires.org/team/8848
+  scout_url: https://www.thebluealliance.com/team/8848
+  tagline: Valley Christian's FIRST Robotics Competition team, 2022–2025. Currently on hiatus.
+  summary: >-
+    BLU CRU competed in the FIRST Robotics Competition from 2022 through 2025. FRC robots are
+    industrial-sized, built over an intense winter build season, and played on a full-size field.
+    That means serious engineering, plus the fundraising, business planning, and community work
+    that keep a team running.
+  facts:
+    - value: "2022"
+      label: Rookie year
+    - value: "Houston"
+      label: Worlds as a rookie
+    - value: "4"
+      label: FRC seasons
+  robots:
+    - season: "2022 · RAPID REACT"
+      name: Fabio
+    - season: "2025 · REEFSCAPE"
+      name: BUBBLES (In a Deep Voice)
+  highlights:
+    - title: Rookie All Star, 2022
+      body: >-
+        In its very first season, BLU CRU ranked 5th of 35 at the Arizona Valley Regional and won
+        the Highest Rookie Seed and Rookie All Star awards, which sent the team to the FIRST
+        Championship in Houston (Newton Division).
+    - title: Industrial Design Award, 2023
+      body: Recognized at the Arizona West Regional during CHARGED UP.
+    - title: REEFSCAPE 2025
+      body: >-
+        Reached the playoffs at the Arizona East Regional as the first pick of Alliance 8.
