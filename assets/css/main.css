@@ -114,7 +114,7 @@ p { margin: 0 0 1em; }
 .badge--2844 { background: var(--blue-100); color: var(--vx-blue); border-color: #b9d3f5; }
 .badge--12841 { background: #e0f6fc; color: #0a6a82; border-color: #a9e3f3; }
 .badge--8848, .badge--hiatus { background: #eef1f6; color: #4c5a72; border-color: #d4dbe6; }
-.badge--alum { background: var(--gold-100); color: #7a5300; border-color: #f6dc9a; margin-top: 6px; align-self: flex-start; }
+.badge--alum { background: var(--gold-100); color: #7a5300; border-color: #f6dc9a; }
 
 .text-link { font-weight: 600; text-decoration: none; color: var(--blue-600); white-space: nowrap; }
 .text-link:hover { text-decoration: underline; }
@@ -607,14 +607,16 @@ a.sponsor__inner:hover { border-color: var(--blue-500); box-shadow: var(--shadow
 .mission p { margin: 0; color: var(--ink); }
 .mission__label { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue-600) !important; margin-bottom: .4rem !important; }
 
-/* Mentors */
-.mentor-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
-.mentor { display: flex; gap: 14px; align-items: flex-start; padding: 18px; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); }
-.section--alt .mentor { border-color: transparent; }
-.mentor__initial { flex: none; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 12px; background: var(--blue-600); color: #fff; font-weight: 700; font-size: 1.1rem; }
-.mentor__body { display: flex; flex-direction: column; gap: 2px; }
-.mentor__name { font: 600 1.08rem/1.25 var(--font-display); color: var(--ink); }
-.mentor__role { font-size: .92rem; color: var(--muted); }
+/* People: mentors + student roster */
+.person-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+.person { display: flex; gap: 14px; align-items: flex-start; padding: 18px; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); }
+.section--alt .person { border-color: transparent; }
+.person__initial { flex: none; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 12px; background: var(--blue-600); color: #fff; font-weight: 700; font-size: 1.1rem; }
+.person__body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.person__name { font: 600 1.08rem/1.25 var(--font-display); color: var(--ink); }
+.person__role { font-size: .92rem; color: var(--muted); }
+.person__meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.badge--captain { background: var(--navy-900); color: #fff; border-color: var(--navy-900); }
 
 /* ==========================================================================
    Engineering additions

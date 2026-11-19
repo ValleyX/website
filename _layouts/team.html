@@ -49,6 +49,7 @@ layout: default
           <div><dt>Level</dt><dd>{{ team.level }}</dd></div>
           <div><dt>Grades</dt><dd>{{ team.grades }}</dd></div>
           <div><dt>Since</dt><dd>{{ team.rookie_year }}</dd></div>
+          {% if team.current_robot %}<div><dt>Current robot</dt><dd>{{ team.current_robot }}</dd></div>{% endif %}
           {% if team.status == 'hiatus' %}<div><dt>Status</dt><dd>On hiatus</dd></div>{% endif %}
         </dl>
         <a class="side-card__link" href="{{ team.first_url }}" rel="noopener">Official FIRST record ↗</a>
@@ -58,7 +59,18 @@ layout: default
   </div>
 </section>
 
-<section class="section section--alt">
+{% assign roster = site.data.roster[team.id] %}
+{% if roster %}
+<section class="section section--alt" id="roster">
+  <div class="container">
+    <p class="eyebrow eyebrow--dark">{{ roster.season }}</p>
+    <h2 class="section__title">Team roster</h2>
+    {% include roster.html team=team.id %}
+  </div>
+</section>
+{% endif %}
+
+<section class="section{% unless roster %} section--alt{% endunless %}">
   <div class="container">
     <h2 class="section__title">Highlights</h2>
     <div class="highlight-grid">

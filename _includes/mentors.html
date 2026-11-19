@@ -1,12 +1,12 @@
-<ul class="mentor-grid">
+<ul class="person-grid">
   {% for m in site.data.mentors %}
   {% assign parts = m.name | split: ' ' %}
-  <li class="mentor">
-    <span class="mentor__initial mono" aria-hidden="true">{{ parts.last | slice: 0 }}</span>
-    <span class="mentor__body">
-      <strong class="mentor__name">{{ m.name }}</strong>
-      <span class="mentor__role">{{ m.role }}{% if m.note %} · {{ m.note }}{% endif %}</span>
-      {% if m.alum %}<span class="badge badge--alum">FIRST alum</span>{% endif %}
+  <li class="person">
+    <span class="person__initial mono" aria-hidden="true">{{ parts.last | slice: 0 }}</span>
+    <span class="person__body">
+      <strong class="person__name">{{ m.name }}</strong>
+      <span class="person__role">{{ m.role }}{% if m.note %} · {{ m.note }}{% endif %}</span>
+      {% if m.alum %}<span class="person__meta"><span class="badge badge--alum">FIRST alum</span></span>{% endif %}
     </span>
   </li>
   {% endfor %}

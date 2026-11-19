@@ -6,8 +6,8 @@ lede: >-
   Strategy first, a design process we run every season, and software we write ourselves and publish
   for any team to use.
 description: >-
-  How Valley X designs its robots, the 48-hour BIOBUZZ rebuild, the custom turret robot, and the
-  open-source tools VCS Robotics builds: ValleyLib, valleyVis, and Apex Scout.
+  How Valley X designs its robots: Born Yesterday, the 48-hour beta of our main robot, the dual-turret
+  main robot in the works, and the open-source tools we build: ValleyLib, valleyVis, and Apex Scout.
 ---
 <section class="section">
   <div class="container">
@@ -42,21 +42,25 @@ description: >-
 
 <section class="section section--alt" id="competition-robot">
   <div class="container">
-    <p class="eyebrow eyebrow--dark">Competition robot</p>
+    <p class="eyebrow eyebrow--dark">Current robot · Beta</p>
     <h2 class="section__title">Born Yesterday: a robot in under 48 hours</h2>
+    <p class="section__lede">
+      Born Yesterday is our current competition robot, and a beta version of our main robot, which is still
+      in the works.
+    </p>
     <div class="split split--even">
       <div class="prose">
         <p>
-          We planned to compete with our custom-built robot, but it needed more time to iterate. On Wednesday,
+          We planned to compete with our main robot, but it needed more time to iterate. On Wednesday,
           November 11, three days before the Roadrunner – Gilbert Qualifier, we decided to design, build, and
-          program an entirely new robot. We finished it in less than 48 hours, and it earned the
+          program a beta version instead. We finished it in less than 48 hours, and it earned the
           <strong>Inspire Award 3rd Place</strong>.
         </p>
         <p>
           We built it mostly from goBILDA components, which made it fast to iterate and easy to change after
           assembly. Custom parts are hard to modify once a robot is together, and not everything can be
-          predicted, as our first robot showed. Going forward, we'll redesign the competition robot with
-          mostly manufactured parts plus custom elements, using what we learned.
+          predicted. What we learn from Born Yesterday goes straight into the main robot, which will combine
+          mostly manufactured parts with custom elements.
         </p>
         <h3>Pollen path</h3>
         <ol class="steps">
@@ -70,7 +74,7 @@ description: >-
         </p>
       </div>
       <div>
-        {% include photo.html name="robot-born-yesterday" alt="The goBILDA competition robot launching a yellow pollen ball." w=1163 h=827 %}
+        {% include photo.html name="robot-born-yesterday" alt="Born Yesterday, the goBILDA beta robot, launching a yellow pollen ball." w=1163 h=827 %}
         <dl class="spec-list">
           <div><dt>Size</dt><dd>15" × 15½" × 13½"</dd></div>
           <div><dt>Drivetrain</dt><dd>Four 435 RPM motors</dd></div>
@@ -82,20 +86,21 @@ description: >-
       </div>
     </div>
     <div class="gallery">
-      {% include photo.html name="robot-side" alt="Side view of the goBILDA competition robot on the field." w=698 h=478 %}
-      {% include photo.html name="robot-top" alt="Top view of the robot holding two pollen balls." w=697 h=478 %}
-      {% include photo.html name="robot-front" alt="Front view of the robot on the field tiles." w=698 h=479 %}
+      {% include photo.html name="robot-side" alt="Side view of Born Yesterday on the field." w=698 h=478 %}
+      {% include photo.html name="robot-top" alt="Top view of Born Yesterday holding two pollen balls." w=697 h=478 %}
+      {% include photo.html name="robot-front" alt="Front view of Born Yesterday on the field tiles." w=698 h=479 %}
     </div>
   </div>
 </section>
 
-<section class="section" id="custom-robot">
+<section class="section" id="main-robot">
   <div class="container">
-    <p class="eyebrow eyebrow--dark">In development</p>
-    <h2 class="section__title">The custom robot</h2>
+    <p class="eyebrow eyebrow--dark">In the works</p>
+    <h2 class="section__title">Our main robot</h2>
     <p class="section__lede">
-      Our custom robot is still being iterated on. It's built around a dual-turret design that we picked
-      over a variable-width shooter, two fixed shooters, and a single shooter with a compliant wheel.
+      Born Yesterday is the beta; this is the full version, and it's still in the works. It's built around a
+      dual-turret design that we picked over a variable-width shooter, two fixed shooters, and a single
+      shooter with a compliant wheel.
     </p>
     <div class="mech-grid">
       <article class="mech">
@@ -182,7 +187,7 @@ description: >-
       </article>
       <article class="control">
         <h3>Built to adapt</h3>
-        <p>When we rebuilt the robot in 48 hours, most of the code carried straight over. Subsystems needed new names and a few values; commands didn't change at all.</p>
+        <p>When we built Born Yesterday in 48 hours, most of the main robot's code carried straight over. Subsystems needed new names and a few values; commands didn't change at all.</p>
       </article>
     </div>
   </div>

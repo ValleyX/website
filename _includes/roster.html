@@ -1,0 +1,18 @@
+{% assign roster = site.data.roster[include.team] %}
+{% if roster %}
+<ul class="person-grid">
+  {% for s in roster.members %}
+  <li class="person">
+    <span class="person__initial mono" aria-hidden="true">{{ s.name | slice: 0 }}</span>
+    <span class="person__body">
+      <strong class="person__name">{{ s.name }}</strong>
+      <span class="person__role">{{ s.roles }}</span>
+      <span class="person__meta">
+        <span class="badge">{{ s.grade }} · {{ s.class_of }}</span>
+        {% if s.tag %}<span class="badge badge--captain">{{ s.tag }}</span>{% endif %}
+      </span>
+    </span>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}

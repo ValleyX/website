@@ -17,6 +17,7 @@ Most updates happen in the YAML files in `_data/`:
 | Sponsors, current and past | `_data/sponsors.yml` |
 | Team bios, facts, highlights, robots, photos | `_data/teams.yml` |
 | Mentors | `_data/mentors.yml` |
+| Student rosters (shown on team pages) | `_data/roster.yml` |
 | Mark a team inactive | `status: hiatus` (plus `status_note`) on that team in `_data/teams.yml` |
 | Links to ValleyLib, valleyVis, Apex Scout | `valleylib_url`, `valleyvis_url`, `apex_scout_url` in `_config.yml` |
 | Season name in the header ribbon | `current_season` in `_config.yml` |

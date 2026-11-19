@@ -12,6 +12,7 @@
   level: Varsity
   rookie_year: 2008
   grades: "7–12"
+  current_robot: Born Yesterday
   url: /teams/2844/
   first_url: https://ftc-events.firstinspires.org/team/2844
   scout_url: https://ftcscout.org/teams/2844
@@ -59,8 +60,8 @@
         Canyon Division, then earned the team's first Premier Event trip, to Western Edge.
     - title: BIOBUZZ 2026–27
       body: >-
-        Built a brand-new robot in under 48 hours, then won the Inspire Award 3rd Place at the
-        season-opening Roadrunner – Gilbert Qualifier.
+        Built Born Yesterday, a beta version of our main robot, in under 48 hours, then won the
+        Inspire Award 3rd Place at the season-opening Roadrunner – Gilbert Qualifier.
 
 - id: "12841"
   number: "12841"
