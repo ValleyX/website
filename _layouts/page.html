@@ -1,9 +1,17 @@
 ---
 layout: default
 ---
-<section class="page-hero">
-  <div class="container">
-    {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
+<section class="page-hero{% if page.hero_image %} page-hero--photo{% endif %}">
+  {% if page.hero_image %}
+  <div class="page-hero__media" aria-hidden="true">
+    <picture>
+      <source srcset="{{ '/assets/img/photos/' | append: page.hero_image | append: '.webp' | relative_url }}" type="image/webp">
+      <img src="{{ '/assets/img/photos/' | append: page.hero_image | append: '.jpg' | relative_url }}" alt="" fetchpriority="high">
+    </picture>
+  </div>
+  {% endif %}
+  <div class="container page-hero__inner">
+    {% if page.eyebrow %}<p class="eyebrow eyebrow--light">{{ page.eyebrow }}</p>{% endif %}
     <h1>{{ page.heading | default: page.title }}</h1>
     {% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
   </div>

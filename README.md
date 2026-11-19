@@ -41,7 +41,9 @@ wide max), then use it in a page with:
 publish anything with a phone number, address, or other personal details visible in it.
 
 **Brand assets** live in `assets/img/brand/`: white versions of the program and Valley X logos (made from
-the blue originals) and the X mark used in the header and favicon. The brand blue is `#0058B2`.
+the blue originals) and the X mark used in the header and favicon. The brand blue is `#0058B2`, and the
+type is Barlow Condensed (headings, nav, buttons) with Barlow (body). Page heroes take an optional
+`hero_image:` (a photo base name) in the page's front matter, and team heroes use `hero_photo` in `teams.yml`.
 
 **New season checklist (each September):**
 1. Update `current_season` in `_config.yml`.

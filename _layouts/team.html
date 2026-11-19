@@ -5,10 +5,18 @@ layout: default
 {% assign seasons = site.data.awards[team.id] %}
 {% include award-count.html seasons=seasons %}
 
-<section class="page-hero team-hero team-hero--{{ team.id }}">
-  <div class="container team-hero__inner">
+<section class="page-hero team-hero{% if team.hero_photo %} page-hero--photo{% endif %}">
+  {% if team.hero_photo %}
+  <div class="page-hero__media" aria-hidden="true">
+    <picture>
+      <source srcset="{{ '/assets/img/photos/' | append: team.hero_photo | append: '.webp' | relative_url }}" type="image/webp">
+      <img src="{{ '/assets/img/photos/' | append: team.hero_photo | append: '.jpg' | relative_url }}" alt="" fetchpriority="high">
+    </picture>
+  </div>
+  {% endif %}
+  <div class="container page-hero__inner team-hero__inner">
     <div>
-      <p class="eyebrow">{{ team.program_long }} · {% if team.status == 'hiatus' %}On hiatus{% else %}{{ team.level }}{% endif %}</p>
+      <p class="eyebrow eyebrow--light">{{ team.program }} {{ team.number }} · {% if team.status == 'hiatus' %}On hiatus{% else %}{{ team.level }}{% endif %}</p>
       <h1>{{ team.name }}</h1>
       <p class="lede">{{ team.tagline }}</p>
     </div>

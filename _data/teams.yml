@@ -18,6 +18,7 @@
   scout_url: https://ftcscout.org/teams/2844
   logo: /assets/img/brand/valleyx-logo-white.png
   logo_alt: Valley X 2844 logo, 2015 World Champions
+  hero_photo: robot-born-yesterday
   photo: valleyx-team
   photo_w: 1385
   photo_h: 640
@@ -75,6 +76,7 @@
   url: /teams/12841/
   first_url: https://ftc-events.firstinspires.org/team/12841
   scout_url: https://ftcscout.org/teams/12841
+  hero_photo: coding-session
   photo: strategy-session
   photo_w: 987
   photo_h: 519

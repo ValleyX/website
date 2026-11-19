@@ -13,79 +13,58 @@ description: >-
 {% endfor %}
 
 <section class="hero">
+  <div class="hero__media">
+    <picture>
+      <source srcset="{{ '/assets/img/photos/valleyx-team.webp' | relative_url }}" type="image/webp">
+      <img src="{{ '/assets/img/photos/valleyx-team.jpg' | relative_url }}" alt="Valley X members in blue team polos with their robot, on a cart labeled 2015 World Champions." width="1385" height="640" fetchpriority="high">
+    </picture>
+  </div>
   <div class="container hero__inner">
-    <div class="hero__copy">
-      <p class="eyebrow">Valley Christian Schools · Chandler, Arizona</p>
-      <h1>Two teams. One God. <span class="hero__accent">Made for God, powered by God.</span></h1>
-      <p class="lede">
-        VCS Robotics designs, builds, and programs competition robots in <em>FIRST</em> Tech Challenge,
-        and has since 2008. Our JV team trains the next generation of our varsity team, the 2015 World Champions.
-      </p>
-      <div class="actions">
-        <a class="btn btn--primary" href="{{ '/teams/' | relative_url }}">Meet the teams</a>
-        <a class="btn btn--ghost" href="{{ '/sponsors/' | relative_url }}">Support the program</a>
-      </div>
-    </div>
-    <div class="hero__logo">
-      <img src="{{ '/assets/img/brand/program-logo-white.png' | relative_url }}" alt="VCS Robotics logo: an X ringed by team numbers 2844, 12841, and 8848" width="277" height="269">
-    </div>
-  </div>
-  <div class="container">
-    <ul class="hero__teams" aria-label="Our teams">
-      {% for t in site.data.teams %}
-      <li>
-        <a class="hero-team hero-team--{{ t.id }}" href="{{ t.url | relative_url }}">
-          <span class="hero-team__num mono">{{ t.number }}</span>
-          <span class="hero-team__meta"><strong>{{ t.name }}</strong><span>{{ t.program }} · {% if t.status == 'hiatus' %}On hiatus{% else %}{{ t.level }}{% endif %}</span></span>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<section class="stat-band" aria-label="Program at a glance">
-  <div class="container stat-band__grid">
-    <div class="stat"><span class="stat__value mono">2008</span><span class="stat__label">Founded</span></div>
-    <div class="stat stat--gold"><span class="stat__value mono">2015</span><span class="stat__label">FTC World Champions</span></div>
-    <div class="stat"><span class="stat__value mono">5</span><span class="stat__label">World Championship trips</span></div>
-    <div class="stat"><span class="stat__value mono">{{ award_all }}</span><span class="stat__label">Awards on record</span></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section__head">
-      <div>
-        <p class="eyebrow eyebrow--dark">Inside the program</p>
-        <h2 class="section__title">Built by students, guided by mentors</h2>
-      </div>
-      <a class="text-link" href="{{ '/teams/' | relative_url }}#mentors">Meet our mentors →</a>
-    </div>
-    <div class="mosaic">
-      {% include photo.html name="valleyx-team" alt="Four Valley X members in blue team polos stand beside their robot on a cart labeled 2844, 2015 World Champions." w=1385 h=640 caption="Valley X with its competition robot." class="mosaic__main" %}
-      {% include photo.html name="build-session" alt="Students in safety glasses assemble a robot drivetrain with mecanum wheels while a mentor helps hold the frame." w=960 h=1280 caption="Building a drivetrain in the shop." class="mosaic__side" %}
-      {% include photo.html name="coding-session" alt="Two students write robot code on a laptop at a workbench while mentors work in the background." w=1280 h=960 caption="Writing robot code, mentors close by." class="mosaic__side" %}
-    </div>
-  </div>
-</section>
-
-<section class="section section--alt">
-  <div class="container">
-    <p class="eyebrow eyebrow--dark">The pathway</p>
-    <h2 class="section__title">From first robot to World Championship</h2>
-    <p class="section__lede">
-      New members start on our JV team, +3 Robotics, and spend at least two years there before moving up to
-      varsity, Valley X. Varsity members mentor the JV students coming up behind them, so the program keeps
-      itself going year after year.
+    <p class="eyebrow eyebrow--light">Valley Christian Schools · Chandler, Arizona</p>
+    <h1 class="hero__title">Two teams.<br>One God.</h1>
+    <p class="hero__sub">Made for God, powered by God.</p>
+    <p class="hero__lede">
+      The robotics program at Valley Christian Schools. Our JV team trains the next generation of
+      our varsity team, the 2015 <em>FIRST</em> Tech Challenge World Champions.
     </p>
-    {% include pathway.html %}
+    <ul class="checks checks--light">
+      <li>2015 FTC World Champions</li>
+      <li>Competing since 2008</li>
+      <li>5 World Championship trips</li>
+      <li>18 State appearances</li>
+    </ul>
+    <div class="actions">
+      <a class="btn btn--primary" href="{{ '/teams/' | relative_url }}">Meet the teams</a>
+      <a class="btn btn--outline-light" href="{{ '/sponsors/' | relative_url }}">Support the program</a>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="container">
+    <p class="intro__text">
+      VCS Robotics designs, builds, and programs a new competition robot every season in <em>FIRST</em>
+      Tech Challenge. Students start on our JV team, +3 Robotics, and move up to varsity, Valley X. Along the
+      way they write open-source software used by teams across Arizona, and host the state's FTC Kickoff.
+    </p>
+    <dl class="stat-row">
+      <div class="stat"><dt class="stat__label">Seasons</dt><dd class="stat__value mono">19</dd></div>
+      <div class="stat"><dt class="stat__label">Awards on record</dt><dd class="stat__value mono">{{ award_all }}</dd></div>
+      <div class="stat"><dt class="stat__label">Teams at our Kickoff</dt><dd class="stat__value mono">86</dd></div>
+      <div class="stat"><dt class="stat__label">Raised this season</dt><dd class="stat__value mono">$35.5K</dd></div>
+    </dl>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <h2 class="section__title">Our teams</h2>
+    <div class="section__head section__head--split">
+      <div>
+        <p class="eyebrow">The program</p>
+        <h2 class="section__title">Our teams</h2>
+      </div>
+      <p>Two FTC teams that work as one program, plus our FRC team, currently on hiatus.</p>
+    </div>
     <div class="team-grid">
       {% for t in site.data.teams %}{% include team-card.html team=t %}{% endfor %}
     </div>
@@ -94,26 +73,55 @@ description: >-
 
 <section class="section section--dark">
   <div class="container">
-    <p class="eyebrow">Why we build</p>
-    <h2 class="section__title">Culture changers for Christ</h2>
-    <div class="mvv">
-      <article class="mvv__item">
+    <div class="section__head section__head--split">
+      <div>
+        <p class="eyebrow eyebrow--light">The pathway</p>
+        <h2 class="section__title">From first robot to World Championship</h2>
+      </div>
+      <p>Everyone starts on JV. After at least two years, students move up to varsity, and mentor the JV students coming up behind them.</p>
+    </div>
+    {% include pathway.html %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container feature">
+    {% include photo.html name="robot-born-yesterday" alt="Born Yesterday, the goBILDA beta robot, launching a yellow pollen ball." w=1163 h=827 class="feature__media" %}
+    <div class="feature__body">
+      <p class="eyebrow">Current robot · {{ site.current_season.label }} {{ site.current_season.game }}</p>
+      <h2 class="section__title">Born Yesterday</h2>
+      <p class="feature__lede">A beta version of our main robot, designed, built, and programmed in under 48 hours.</p>
+      <p>It won the Inspire Award 3rd Place at its first event. Everything we learn from it goes into our main robot, a dual-turret design that's still in the works.</p>
+      <dl class="spec-list">
+        <div><dt>Build time</dt><dd>Under 48 hours</dd></div>
+        <div><dt>Shooter</dt><dd>6,000 RPM motor</dd></div>
+        <div><dt>Drivetrain</dt><dd>Four 435 RPM motors</dd></div>
+      </dl>
+      <a class="text-link" href="{{ '/engineering/' | relative_url }}">See how we build it</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section__head section__head--split">
+      <div>
+        <p class="eyebrow">Why we build</p>
+        <h2 class="section__title">Culture changers for Christ</h2>
+      </div>
+    </div>
+    <div class="columns columns--3">
+      <article class="column">
         <h3>Mission</h3>
         <p>Equip students to be culture changers for Christ through hands-on STEM, Christ-centered mentorship, and collaborative innovation.</p>
       </article>
-      <article class="mvv__item">
+      <article class="column">
         <h3>Vision</h3>
         <p>Create a Christ-centered robotics community where students excel in science, grow spiritually, and lead with integrity.</p>
       </article>
-      <article class="mvv__item">
+      <article class="column">
         <h3>Values</h3>
-        <ul class="values">
-          <li>Honor Christ</li>
-          <li>Pursue excellence</li>
-          <li>Build community</li>
-          <li>Change culture</li>
-          <li>Partner with parents and local churches</li>
-        </ul>
+        <p>Honor Christ. Pursue excellence. Build community. Change culture. Partner with parents and local churches.</p>
       </article>
     </div>
   </div>
@@ -121,45 +129,51 @@ description: >-
 
 <section class="section">
   <div class="container">
-    <div class="section__head">
-      <h2 class="section__title">Latest from the field</h2>
-      <a class="text-link" href="{{ '/awards/' | relative_url }}">Full results →</a>
+    <div class="section__head section__head--split">
+      <div>
+        <p class="eyebrow">News</p>
+        <h2 class="section__title">Latest from the field</h2>
+      </div>
+      <a class="text-link" href="{{ '/awards/' | relative_url }}">Full results</a>
     </div>
-    <div class="updates">
+    <div class="columns columns--3">
       {% for u in site.data.updates limit: 3 %}
-      <article class="update">
-        <time class="update__date mono" datetime="{{ u.date | date: '%Y-%m-%d' }}">{{ u.date | date: "%b %-d, %Y" }}</time>
+      <article class="column">
+        <time class="column__date" datetime="{{ u.date | date: '%Y-%m-%d' }}">{{ u.date | date: "%B %-d, %Y" }}</time>
         <h3>{{ u.title }}</h3>
         <p>{{ u.body }}</p>
-        <p class="update__teams">{% for id in u.teams %}<span class="badge badge--{{ id }}">{{ id }}</span>{% endfor %}</p>
       </article>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="section section--alt">
-  <div class="container feature-pair">
-    <a class="feature" href="{{ '/engineering/' | relative_url }}">
-      <p class="eyebrow eyebrow--dark">Engineering</p>
-      <h3>We write our own tools, then share them.</h3>
-      <p>ValleyLib, our command-based library, valleyVis, our auto path planner, and Apex Scout, our offline scouting app, which 70+ people on more than 10 teams have used.</p>
-      <span class="text-link">See how we build →</span>
-    </a>
-    <a class="feature" href="{{ '/outreach/' | relative_url }}">
-      <p class="eyebrow eyebrow--dark">Outreach</p>
-      <h3>We host the Arizona FTC Kickoff.</h3>
-      <p>For three years running, we've hosted and run the season kickoff for every FTC team in Arizona: 86 teams at the latest one.</p>
-      <span class="text-link">See our outreach →</span>
-    </a>
+<section class="section section--dark">
+  <div class="container">
+    <div class="section__head section__head--split">
+      <div>
+        <p class="eyebrow eyebrow--light">Outreach</p>
+        <h2 class="section__title">Serving Arizona's FIRST community</h2>
+      </div>
+      <a class="btn btn--outline-light" href="{{ '/outreach/' | relative_url }}">See our outreach</a>
+    </div>
+    <dl class="stat-row stat-row--dark">
+      <div class="stat"><dt class="stat__label">Years hosting the AZ FTC Kickoff</dt><dd class="stat__value mono">3</dd></div>
+      <div class="stat"><dt class="stat__label">Teams at the latest Kickoff</dt><dd class="stat__value mono">86</dd></div>
+      <div class="stat"><dt class="stat__label">Parts &amp; tools lent at Western Edge</dt><dd class="stat__value mono">37</dd></div>
+      <div class="stat"><dt class="stat__label">People using Apex Scout</dt><dd class="stat__value mono">70+</dd></div>
+    </dl>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="section__head">
-      <h2 class="section__title">Thank you to our {{ site.current_season.label }} sponsors</h2>
-      <a class="text-link" href="{{ '/sponsors/' | relative_url }}">Become a sponsor →</a>
+    <div class="section__head section__head--split">
+      <div>
+        <p class="eyebrow">Sponsors</p>
+        <h2 class="section__title">Thank you to our {{ site.current_season.label }} sponsors</h2>
+      </div>
+      <a class="text-link" href="{{ '/sponsors/' | relative_url }}">Become a sponsor</a>
     </div>
     {% include sponsor-grid.html sponsors=site.data.sponsors.current compact=true %}
   </div>

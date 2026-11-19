@@ -1,11 +1,19 @@
 {% assign t = include.team %}
-<a class="team-card team-card--{{ t.id }}{% if t.status == 'hiatus' %} team-card--hiatus{% endif %}" href="{{ t.url | relative_url }}">
-  <span class="team-card__top">
-    <span class="team-card__program mono">{{ t.program }}</span>
-    {% if t.status == 'hiatus' %}<span class="badge badge--hiatus">On hiatus</span>{% else %}<span class="badge badge--{{ t.id }}">{{ t.level }}</span>{% endif %}
+<a class="team-card{% if t.status == 'hiatus' %} team-card--hiatus{% endif %}" href="{{ t.url | relative_url }}">
+  <span class="team-card__media">
+    {% if t.photo %}
+    <picture>
+      <source srcset="{{ '/assets/img/photos/' | append: t.photo | append: '.webp' | relative_url }}" type="image/webp">
+      <img src="{{ '/assets/img/photos/' | append: t.photo | append: '.jpg' | relative_url }}" alt="" width="{{ t.photo_w }}" height="{{ t.photo_h }}" loading="lazy" decoding="async">
+    </picture>
+    {% else %}
+    <span class="team-card__placeholder mono" aria-hidden="true">{{ t.number }}</span>
+    {% endif %}
   </span>
-  <span class="team-card__number mono">{{ t.number }}</span>
-  <span class="team-card__name">{{ t.name }}</span>
-  <span class="team-card__tagline">{{ t.tagline }}</span>
-  <span class="team-card__link">Meet {{ t.short }} <span aria-hidden="true">→</span></span>
+  <span class="team-card__body">
+    <span class="team-card__program">{{ t.program }} {{ t.number }} · {% if t.status == 'hiatus' %}On hiatus{% else %}{{ t.level }}{% endif %}</span>
+    <span class="team-card__name">{{ t.name }}</span>
+    <span class="team-card__tagline">{{ t.tagline }}</span>
+    <span class="team-card__link">Meet {{ t.short }}</span>
+  </span>
 </a>

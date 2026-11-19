@@ -3,7 +3,7 @@
   <header class="season__head">
     <span class="season__year mono">{{ s.season }}</span>
     <span class="season__game">{{ s.game }}</span>
-    <span class="season__count">{{ s.awards.size }}</span>
+    <span class="season__count">{{ s.awards.size }} {% if s.awards.size == 1 %}award{% else %}awards{% endif %}</span>
   </header>
   <ul class="award-list">
     {% for a in s.awards %}

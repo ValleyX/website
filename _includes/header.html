@@ -1,16 +1,15 @@
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="ribbon">
-  <div class="container ribbon__inner">
-    <span class="ribbon__dot" aria-hidden="true"></span>
-    <span>{{ site.current_season.label }} FTC season: <strong>{{ site.current_season.game }}</strong></span>
-    <a href="{{ '/awards/' | relative_url }}">See results</a>
+<div class="utility">
+  <div class="container utility__inner">
+    <span class="utility__school">Valley Christian Schools · Chandler, Arizona</span>
+    <span class="utility__season">{{ site.current_season.label }} FTC season: {{ site.current_season.game }} <a href="{{ '/awards/' | relative_url }}">Results</a></span>
   </div>
 </div>
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="brand" href="{{ '/' | relative_url }}" aria-label="VCS Robotics home">
       {% include logo-mark.html %}
-      <span class="brand__text"><strong>VCS</strong> Robotics</span>
+      <span class="brand__text">VCS Robotics</span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
       <span class="sr-only">Menu</span>
@@ -21,7 +20,7 @@
         {% for item in site.data.nav %}
         <li><a href="{{ item.url | relative_url }}"{% if page.url contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
         {% endfor %}
-        <li><a class="btn btn--primary btn--small" href="{{ '/join/' | relative_url }}"{% if page.url contains '/join/' %} aria-current="page"{% endif %}>Join</a></li>
+        <li class="site-nav__cta"><a class="btn btn--primary" href="{{ '/join/' | relative_url }}"{% if page.url contains '/join/' %} aria-current="page"{% endif %}>Join the team</a></li>
       </ul>
     </nav>
   </div>
