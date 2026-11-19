@@ -10,6 +10,9 @@ lang: en_US
 
 contact_email: robotics@valleychristianaz.org
 github_url: https://github.com/ValleyX
+valleylib_url: https://github.com/ValleyX/valleyLib
+apex_scout_url: https://scout.vcs-robotics.com
+valleyvis_url: https://vis.vcs-robotics.com
 school:
   name: Valley Christian Schools
   url: https://valleychristianaz.org

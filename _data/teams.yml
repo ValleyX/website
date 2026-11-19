@@ -1,5 +1,7 @@
 # One entry per team. Pages under /teams/ read from here.
 # `highlights` show on the team page; `facts` show as the stat row.
+# `photo` is a base name in /assets/img/photos/ (both .webp and .jpg must exist).
+# `status: hiatus` marks a team that isn't competing this season.
 
 - id: "2844"
   number: "2844"
@@ -13,19 +15,31 @@
   url: /teams/2844/
   first_url: https://ftc-events.firstinspires.org/team/2844
   scout_url: https://ftcscout.org/teams/2844
+  logo: /assets/img/brand/valleyx-logo-white.png
+  logo_alt: Valley X 2844 logo, 2015 World Champions
+  photo: valleyx-team
+  photo_w: 1385
+  photo_h: 640
+  photo_alt: Four Valley X members in blue team polos stand beside their robot on a cart labeled 2844, 2015 World Champions.
+  photo_caption: Valley X with its competition robot.
   tagline: Varsity FTC since 2008, and 2015 FIRST Tech Challenge World Champions.
   summary: >-
-    Valley X is the varsity FIRST Tech Challenge team at Valley Christian High School and the
-    team the rest of the program grew out of. Now in its 19th season, Valley X designs, builds,
-    and programs a new robot every year, writes its own open-source software, and runs outreach
-    for teams across Arizona.
+    Valley X is the varsity FIRST Tech Challenge team at Valley Christian High School, and the
+    team the rest of the program grew out of. Now in its 19th season, with six members (up from
+    four last year), Valley X designs, builds, and programs a new robot every year, writes its own
+    open-source software, and runs outreach for teams across Arizona.
+  mission: >-
+    To create a welcoming space where students get hands-on experience in design, CAD, building,
+    and programming. Through the engineering design process, we develop students' STEM skills,
+    teamwork, and leadership, and we work with our community to spread awareness of STEM and
+    FIRST® throughout our region.
   facts:
-    - value: "2008"
-      label: Founded
     - value: "2015"
       label: World Champions
     - value: "5"
       label: World Championship trips
+    - value: "18"
+      label: State appearances
   highlights:
     - title: 2015 FIRST Tech Challenge World Champions
       body: >-
@@ -42,7 +56,11 @@
     - title: DECODE 2025–26
       body: >-
         31–17 across five official events: ranked 2nd of 25 in the Arizona Championship's Grand
-        Canyon Division, then went on to the Western Edge Premier Event.
+        Canyon Division, then earned the team's first Premier Event trip, to Western Edge.
+    - title: BIOBUZZ 2026–27
+      body: >-
+        Built a brand-new robot in under 48 hours, then won the Inspire Award 3rd Place at the
+        season-opening Roadrunner – Gilbert Qualifier.
 
 - id: "12841"
   number: "12841"
@@ -56,19 +74,25 @@
   url: /teams/12841/
   first_url: https://ftc-events.firstinspires.org/team/12841
   scout_url: https://ftcscout.org/teams/12841
+  photo: strategy-session
+  photo_w: 987
+  photo_h: 519
+  photo_alt: Students from +3 and Valley X map out game strategy on a whiteboard grid.
+  photo_caption: +3 and Valley X planning strategy together.
   tagline: The JV team that trains the next generation of Valley X.
   summary: >-
-    +3 Robotics is the program's junior varsity FTC team. Newer members learn the whole
-    engineering cycle (CAD, build, code, drive, and judging) on a real competition robot, then
-    move up to Valley X. +3 is also a contender in its own right, with Inspire, Control, Think,
-    and Design awards and qualifier wins three seasons running.
+    +3 Robotics is the program's junior varsity FTC team, now in its 10th season. Members spend at
+    least two years on +3 before they're eligible for varsity, learning the whole engineering cycle
+    (CAD, build, code, drive, and judging) on a real competition robot. +3 is also a contender in
+    its own right, with Inspire, Control, Think, and Design awards and qualifier wins three
+    seasons running.
   facts:
     - value: "2017"
       label: Founded
     - value: "3"
       label: Qualifier wins
-    - value: "JV"
-      label: Feeds Valley X
+    - value: "2 yrs"
+      label: On JV before varsity
   highlights:
     - title: Qualifier wins three seasons running
       body: >-
@@ -92,14 +116,16 @@
   program: FRC
   program_long: FIRST Robotics Competition
   level: High School
+  status: hiatus
+  status_note: BLU CRU is currently inactive, but may return in a future season.
   rookie_year: 2022
   grades: "9–12"
   url: /teams/8848/
   first_url: https://frc-events.firstinspires.org/team/8848
   scout_url: https://www.thebluealliance.com/team/8848
-  tagline: Full-size FRC robots, built by Valley Christian High School students since 2022.
+  tagline: Valley Christian's FIRST Robotics Competition team, 2022–2025. Currently on hiatus.
   summary: >-
-    BLU CRU is Valley Christian's FIRST Robotics Competition team. FRC robots are
+    BLU CRU competed in the FIRST Robotics Competition from 2022 through 2025. FRC robots are
     industrial-sized, built over an intense winter build season, and played on a full-size field.
     That means serious engineering, plus the fundraising, business planning, and community work
     that keep a team running.
@@ -108,8 +134,8 @@
       label: Rookie year
     - value: "Houston"
       label: Worlds as a rookie
-    - value: "25+"
-      label: Students
+    - value: "4"
+      label: FRC seasons
   robots:
     - season: "2022 · RAPID REACT"
       name: Fabio

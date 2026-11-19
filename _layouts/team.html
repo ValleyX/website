@@ -8,16 +8,23 @@ layout: default
 <section class="page-hero team-hero team-hero--{{ team.id }}">
   <div class="container team-hero__inner">
     <div>
-      <p class="eyebrow">{{ team.program_long }} · {{ team.level }}</p>
+      <p class="eyebrow">{{ team.program_long }} · {% if team.status == 'hiatus' %}On hiatus{% else %}{{ team.level }}{% endif %}</p>
       <h1>{{ team.name }}</h1>
       <p class="lede">{{ team.tagline }}</p>
     </div>
+    {% if team.logo %}
+    <img class="team-hero__logo" src="{{ team.logo | relative_url }}" alt="{{ team.logo_alt }}" width="396" height="300">
+    {% else %}
     <p class="team-hero__number mono" aria-hidden="true">{{ team.number }}</p>
+    {% endif %}
   </div>
 </section>
 
 <section class="section">
   <div class="container">
+    {% if team.status == 'hiatus' %}
+    <p class="hiatus-banner"><span class="badge badge--hiatus">On hiatus</span> {{ team.status_note }}</p>
+    {% endif %}
     <dl class="facts">
       {% for f in team.facts %}
       <div class="fact"><dt>{{ f.label }}</dt><dd class="mono">{{ f.value }}</dd></div>
@@ -27,8 +34,12 @@ layout: default
 
     <div class="split">
       <div class="prose">
+        {% if team.photo %}{% include photo.html name=team.photo alt=team.photo_alt w=team.photo_w h=team.photo_h caption=team.photo_caption eager=true %}{% endif %}
         <h2>About {{ team.short }}</h2>
         <p>{{ team.summary }}</p>
+        {% if team.mission %}
+        <blockquote class="mission"><p class="mission__label mono">Our mission</p><p>{{ team.mission }}</p></blockquote>
+        {% endif %}
         {{ content }}
       </div>
       <aside class="side-card">
@@ -38,6 +49,7 @@ layout: default
           <div><dt>Level</dt><dd>{{ team.level }}</dd></div>
           <div><dt>Grades</dt><dd>{{ team.grades }}</dd></div>
           <div><dt>Since</dt><dd>{{ team.rookie_year }}</dd></div>
+          {% if team.status == 'hiatus' %}<div><dt>Status</dt><dd>On hiatus</dd></div>{% endif %}
         </dl>
         <a class="side-card__link" href="{{ team.first_url }}" rel="noopener">Official FIRST record ↗</a>
         <a class="side-card__link" href="{{ team.scout_url }}" rel="noopener">Match stats ↗</a>

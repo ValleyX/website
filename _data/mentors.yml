@@ -1,0 +1,16 @@
+# Mentors and coaches, shown on /teams/ and /join/.
+# Set `alum: true` for FIRST alumni.
+- name: Mr. Rainey
+  role: Head coach
+  note: Leads the whole program
+- name: Mr. Wright
+  role: Build
+- name: Mr. Barrett
+  role: Build
+- name: Mr. Ettinger
+  role: Programming
+- name: Jedyn Arenson
+  role: CAD
+  alum: true
+- name: John Jaeger
+  role: CAD

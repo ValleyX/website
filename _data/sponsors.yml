@@ -1,15 +1,19 @@
-# Current-season sponsors, from the 2026–27 FIRST team registrations.
+# Current-season sponsors (2026–27). Every sponsor's logo goes on the robot and team marketing.
 # Optional fields: url, logo (path under /assets/img/sponsors/), note.
 current:
   - name: Valley Christian Schools
     url: https://valleychristianaz.org
-    note: Home of the program
-  - name: Dassault Systèmes / SOLIDWORKS
-    url: https://www.solidworks.com
+    logo: /assets/img/sponsors/valley-christian.png
   - name: QTS Data Centers
     url: https://qtsdatacenters.com
+    logo: /assets/img/sponsors/qts.png
   - name: Rainey Renovations
+    logo: /assets/img/sponsors/rainey-renovations.png
+  - name: Dassault Systèmes (SOLIDWORKS)
+    url: https://www.3ds.com
+    logo: /assets/img/sponsors/dassault-systemes.png
   - name: Pedal Power Generator
+    logo: /assets/img/sponsors/pedal-power.png
 
 # Organizations that have supported VCS Robotics teams in past seasons.
 past:

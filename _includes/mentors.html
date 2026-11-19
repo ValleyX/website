@@ -1,0 +1,14 @@
+<ul class="mentor-grid">
+  {% for m in site.data.mentors %}
+  {% assign parts = m.name | split: ' ' %}
+  <li class="mentor">
+    <span class="mentor__initial mono" aria-hidden="true">{{ parts.last | slice: 0 }}</span>
+    <span class="mentor__body">
+      <strong class="mentor__name">{{ m.name }}</strong>
+      <span class="mentor__role">{{ m.role }}{% if m.note %} · {{ m.note }}{% endif %}</span>
+      {% if m.alum %}<span class="badge badge--alum">FIRST alum</span>{% endif %}
+    </span>
+  </li>
+  {% endfor %}
+</ul>
+<p class="note">Most of our mentors are parents or <em>FIRST</em> alumni who volunteer their time.</p>
